@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd7.MainPage">
+
+    <StackLayout Padding="10">
+        
+        <Label Text="Информация по видам материалов (покупка пиломатериалов)"
+               FontAttributes="Italic"
+               TextColor="Green"
+               HorizontalOptions="Center" />
+
+        
+        <StackLayout>
+            <Label x:Name="l1" Text="Название пиломатериала: Доска" />
+            <Label x:Name="l2" Text="Вид дерева: Сосна" />
+            <Label x:Name="l3" Text="Категория: Высший сорт" />
+            <Label x:Name="l4" Text="Цена: 100 руб/м" />
+            <Label x:Name="l5" Text="Производитель: Леспром" />
+            <Label x:Name="l6" Text="Количество метров: 10" />
+            <Label x:Name="l7" Text="Количество дней на изготовление: 5" />
+            <Label x:Name="l8" Text="Краткое описание: Используется для строительства" />
+            <Label x:Name="l9" Text="Вид оплаты: Наличный расчет" />
+            <Label x:Name="l10" Text="Необходимость обработки: Нет" />
+            <Label x:Name="l11" Text="Стоимость:" />
+            <Image x:Name="im" HeightRequest="300">
+                
+            </Image>
+        </StackLayout>
+
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Расчет стоимости" Clicked="OnCalculateClicked" />
+            <Button Text="Возврат на главную" Clicked="OnReturnClicked" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

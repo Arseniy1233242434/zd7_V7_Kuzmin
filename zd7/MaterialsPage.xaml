@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd7.MaterialsPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+           
+            <Label Text="Онлайн-магазин лесничества (покупка пиломатериалов)"
+               FontAttributes="Bold"
+               BackgroundColor="Yellow"
+               TextColor="Green"
+               HorizontalOptions="Center" />
+            <Label x:Name="CurrentDateLabel" Text="Данные по наличию пиломатериалов на текущую дату: 11.12.2024"
+   TextColor="Red"
+   HorizontalOptions="Center" />
+
+            <ListView x:Name="MaterialsListView" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Image Source="{Binding Image}" WidthRequest="50" HeightRequest="50" />
+                                <StackLayout>
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                    <Label Text="{Binding Price}" TextColor="Gray" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+           
+            
+
+          
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Просмотр информации по материалу" Clicked="OnViewMaterialClicked" />
+                
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Расчет стоимости покупки" Clicked="OnCalculateClicked" />
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

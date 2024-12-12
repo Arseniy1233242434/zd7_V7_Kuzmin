@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd7.CalculationPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Калькулятор стоимости" FontSize="Large" HorizontalOptions="Center" />
+
+            
+            
+            <Entry x:Name="DaysEntry" Placeholder="Введите количество дней на изготовление" Keyboard="Numeric" />
+            <Picker x:Name="PaymentTypePicker" Title="Выберите вид оплаты">
+                <Picker.Items>
+                    <x:String>Наличный расчет</x:String>
+                    <x:String>Безналичный расчет</x:String>
+                </Picker.Items>
+            </Picker>
+
+            
+            <Button Text="Рассчитать" Clicked="OnCalculateClicked" />
+            <Button Text="На главную" Clicked="OnBackClicked" />
+            <Button Text="На корневую" Clicked="On" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
